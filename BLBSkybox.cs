@@ -562,11 +562,12 @@ void UpdateWorldTime() {
             }
             else
             {
+				// Here's the change I made. Aren't I cool?
+				LightningFlashListener.Instance.StopListening();
                 if (lightningCoroutine != null)
                 {
                     //Debug.Log("BLB: Stopping lightning effect.");
                     StopCoroutine(lightningCoroutine);
-                    LightningFlashListener.Instance.StopListening();
                     lightningCoroutine = null;
                 }
             }
